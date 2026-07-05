@@ -1,0 +1,16 @@
+﻿<scene version="0.6.0">
+    <default name="roughness" value="0.1" />
+    <default name="melaninConcentration" value="0.2" />
+    <default name="melaninRatio" value="0.5" />
+    <default name="overrideSigmaA" value="false" />
+    <default name="sigmaA_x" value="0.001858" />
+    <default name="sigmaA_y" value="0.000708" />
+    <default name="sigmaA_z" value="0.000192" />
+    <bsdf type="dEon" id="dEon-BCSDF">
+        <float name="roughness" value="$roughness" />
+        <float name="melaninConcentration" value="$melaninConcentration" />
+        <float name="melaninRatio" value="$melaninRatio" />
+        <boolean name="overrideSigmaA" value="$overrideSigmaA"></boolean>
+        <vector name="sigmaA" x="$sigmaA_x" y="$sigmaA_y" z="$sigmaA_z"></vector>
+    </bsdf>
+</scene>

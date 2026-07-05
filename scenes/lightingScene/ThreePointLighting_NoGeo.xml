@@ -1,0 +1,41 @@
+﻿<scene version="0.6.0">
+    <!-- <include filename="head/wCurly_head.xml" /> -->
+    <!-- <emitter type="directional">
+        <spectrum name="irradiance" value="4" />
+        <vector name="direction" x="1" y="0" z="0" />
+    </emitter> -->
+    <!-- <emitter type="constant">
+        <spectrum name="radiance" value="0.2"></spectrum>
+    </emitter> -->
+    <shape type="sphere">
+        <float name="radius" value="170"></float>
+        <transform name="toWorld">
+            <matrix value="1 0 0 -180 0 0 1 160 0 -1 0 180 0 0 0 1" />
+        </transform>
+        <emitter type="area">
+            <spectrum name="radiance" value="6" />
+        </emitter>
+    </shape>
+
+
+    <shape type="sphere">
+        <float name="radius" value="40"></float>
+        <transform name="toWorld">
+            <matrix value="1 0 0 100 0 0 1 150 0 -1 0 -140 0 0 0 1" />
+        </transform>
+        <emitter type="area">
+            <spectrum name="radiance" value="12" />
+        </emitter>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="300" />
+        <transform name="toWorld">
+            <matrix value="1 0 0 -400 0 0 1 -400 0 -1 0 -400 0 0 0 1" />
+        </transform>
+        <emitter type="area">
+            <spectrum name="radiance" value="1.2" />
+        </emitter>
+    </shape>
+
+</scene>

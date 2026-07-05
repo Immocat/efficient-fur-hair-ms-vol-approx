@@ -1,0 +1,14 @@
+﻿<scene version="0.6.0">
+
+
+    <shape type="bsplinehair" id="hairGeo">
+        <string name="filename" value="$hairName.hair" />
+        <float name="radius" value="0.02" />
+        <ref id="$hairBCSDF" />
+        <ref id="furBSSRDF" optional="true"/>
+        <transform name="toWorld">
+            <matrix value="1 0 0 0 0 0 1 0 0 -1 0 0 0 0 0 1" />
+        </transform>
+        <integer name="rayMask" value="$rayMask" />
+    </shape>
+</scene>

@@ -1,0 +1,21 @@
+﻿<scene version="0.6.0">
+    <emitter type="directional">
+        <spectrum name="irradiance" value="4" />
+        <vector name="direction" x="1" y="-1" z="-1" />
+        <vector name="direction" x="1" y="0" z="0" />
+    </emitter>
+    <shape type="rectangle">
+        <transform name="toWorld">
+            <matrix value="0 0 -1 90 100 0 0 0 0 -95 0 0 0 0 0 1" />
+        </transform>
+        <bsdf type="twosided">
+            <bsdf type="roughdiffuse">
+                <texture type="bitmap" name="reflectance">
+                    <string name="filename" value="stone4.jpeg" />
+                </texture>
+                <float name="alpha" value="0.95" />
+            </bsdf>
+        </bsdf>
+    </shape>
+
+</scene>

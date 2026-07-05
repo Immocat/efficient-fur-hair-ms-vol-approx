@@ -1,0 +1,41 @@
+# Mitsuba Project clang-format configuration
+# Based on the LLVM style with modifications to match project documentation.
+
+Language: Cpp
+BasedOnStyle: LLVM
+
+# Indentation: The Mitsuba codebase uses tabs for indentation, which expand to four spaces.
+UseTab:               Always
+IndentWidth:          4
+TabWidth:             4
+BreakBeforeBraces:    Attach
+
+# Placement of spaces: Placement of spaces follows K&R
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AllowShortBlocksOnASingleLine: false
+SpaceBeforeParens:    ControlStatements
+SpaceAfterControlStatementKeyword: true
+SpaceBeforeCpp11BracedList: false
+SpaceAfterTemplateKeyword: true
+
+# Placement of braces: Opening braces should be placed on the same line
+BraceWrapping:
+  AfterClass:         false
+  AfterControlStatement: false
+  AfterEnum:          false
+  AfterFunction:      false
+  AfterNamespace:     false
+  AfterStruct:        false
+  AfterUnion:         false
+  AfterExternBlock:   false
+  BeforeCatch:        true
+  BeforeElse:         true
+  IndentBraces:       false
+
+# Pointer Alignment
+PointerAlignment:     Right
+
+# Column Limit
+ColumnLimit:          0

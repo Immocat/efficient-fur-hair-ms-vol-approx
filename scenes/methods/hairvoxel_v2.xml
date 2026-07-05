@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<scene version="0.6.0">
+    <include filename="bsdf/$shadingModel.xml" />
+
+    <default name="maxDepth" value="2" />
+    <default name="rrDepth" value="5" />
+
+    <default name="rayMask" value="1" />
+    <include filename="hairgeo/$hairName.xml" />
+
+    <integrator type="hairpath">
+        <integer name="maxDepth" value="$maxDepth" />
+        <integer name="rrDepth" value="$rrDepth" />
+    </integrator>
+
+    <!-- Voxelization parameter -->
+    <default name="visStr" value="direction" />
+    <default name="voxelCount" value="128" />
+    <default name="voxelCountX" value="0" />
+    <default name="voxelCountY" value="0" />
+    <default name="voxelCountZ" value="0" />
+    <default name="dMultiplier" value="0.8" />
+    <default name="sampleDeltaAlongHair" value="0.5"></default>
+    <default name="useInputSegments" value="true"></default>
+    <default name="visualize" value="false" />
+
+    <precomputer type="hairvoxelizer2">
+        <integer name="voxelCount" value="$voxelCount"></integer>
+        <integer name="voxelCountX" value="$voxelCountX"></integer>
+        <integer name="voxelCountY" value="$voxelCountY"></integer>
+        <integer name="voxelCountZ" value="$voxelCountZ"></integer>
+        <float name="sampleDeltaAlongHair" value="$sampleDeltaAlongHair"></float>
+        <boolean name="useInputSegments" value="$useInputSegments"></boolean>
+        <boolean name="visualize" value="$visualize"></boolean>
+        <string name="visualizeContent" value="$visStr" />
+    </precomputer>
+</scene>

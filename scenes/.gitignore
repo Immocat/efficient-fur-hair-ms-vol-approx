@@ -1,0 +1,11 @@
+*.hair
+*.vol
+*.hairvol
+*_densityScale.xml
+*_preview.exr
+*_path.exr
+*_ours.exr
+placement_test/
+hairvolume_ours/
+hairvolume_comparison/
+hairvoxelizer_preview/

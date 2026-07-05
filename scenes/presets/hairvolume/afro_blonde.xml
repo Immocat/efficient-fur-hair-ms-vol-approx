@@ -1,0 +1,7 @@
+﻿<scene version="0.6.0">
+    <!-- Fill with the tuned parameters for the afro hairstyle and blonde material. -->
+    <default name="a" value="0.584" />
+    <default name="c" value="0.731" />
+    <default name="gamma" value="0.808" />
+    <default name="octaves" value="5" />
+</scene>

@@ -1,0 +1,15 @@
+﻿<scene version="0.6.0">
+    <!-- include BCSDF file -->
+    <include filename="bsdf/$shadingModel.xml" />
+
+    <default name="maxDepth" value="80" />
+    <default name="rrDepth" value="20" />
+
+    <default name="rayMask" value="1" />
+    <include filename="hairgeo/$hairName.xml" />
+
+    <integrator type="hairpath">
+        <integer name="maxDepth" value="$maxDepth" />
+        <integer name="rrDepth" value="$rrDepth" />
+    </integrator>
+</scene>

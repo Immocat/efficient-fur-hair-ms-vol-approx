@@ -1,0 +1,34 @@
+﻿<scene version="0.6.0">
+    <default name="renderMode" value="far" />
+    <default name="useColorTexture" value="false" />
+    <default name="medulla_ratio" value="0.65" />
+    <default name="eta" value="1.19" />
+    <default name="beta_m" value="0.130" />
+    <default name="beta_n" value="0.120" />
+    <default name="alpha" value="0.0316" />
+    <default name="g" value="0.08" />
+    <default name="layers" value="2.0" />
+
+    <default name="abs_out_x" value="0.133" />
+    <default name="abs_out_y" value="1.967" />
+    <default name="abs_out_z" value="2.1" />
+
+    <default name="absorption_inner" value="0.14" />
+    <default name="scattering_inner" value="2.30" />
+
+    <bsdf type="fur2" id="fur2-BCSDF">
+        <string name="renderMode" value="$renderMode" />
+        <boolean name="useColorTexture" value="$useColorTexture" />
+        <float name="medulla_ratio" value="$medulla_ratio" />
+        <float name="eta" value="$eta" />
+        <float name="beta_m" value="$beta_m" />
+        <float name="beta_n" value="$beta_n" />
+        <float name="alpha" value="$alpha" />
+        <float name="g" value="$g" />
+        <float name="layers" value="$layers" />
+
+        <vector name="absorption_outer" x="$abs_out_x" y="$abs_out_y" z="$abs_out_z" />
+        <float name="absorption_inner" value="$absorption_inner" />
+        <float name="scattering_inner" value="$scattering_inner" />
+    </bsdf>
+</scene>

@@ -1,0 +1,47 @@
+﻿<scene version="0.6.0">
+    <shape type="sphere">
+        <float name="radius" value="170"></float>
+        <transform name="toWorld">
+            <matrix value="1 0 0 -180 0 0 1 160 0 -1 0 180 0 0 0 1" />
+        </transform>
+        <emitter type="area">
+            <spectrum name="radiance" value="6" />
+        </emitter>
+    </shape>
+
+
+    <shape type="sphere">
+        <float name="radius" value="40"></float>
+        <transform name="toWorld">
+            <matrix value="1 0 0 100 0 0 1 150 0 -1 0 -140 0 0 0 1" />
+        </transform>
+        <emitter type="area">
+            <spectrum name="radiance" value="12" />
+        </emitter>
+    </shape>
+
+    <shape type="sphere">
+        <float name="radius" value="300" />
+        <transform name="toWorld">
+            <matrix value="1 0 0 -400 0 0 1 -400 0 -1 0 -400 0 0 0 1" />
+        </transform>
+        <emitter type="area">
+            <spectrum name="radiance" value="1.2" />
+        </emitter>
+    </shape>
+
+    <shape type="rectangle">
+        <transform name="toWorld">
+            <matrix value="0 0 -1 90 100 0 0 0 0 -95 0 0 0 0 0 1" />
+        </transform>
+        <bsdf type="twosided">
+            <bsdf type="roughdiffuse">
+                <texture type="bitmap" name="reflectance">
+                    <string name="filename" value="stone4.jpeg" />
+                </texture>
+                <float name="alpha" value="0.95" />
+            </bsdf>
+        </bsdf>
+    </shape>
+
+</scene>

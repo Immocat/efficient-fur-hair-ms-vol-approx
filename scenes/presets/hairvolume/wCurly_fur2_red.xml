@@ -1,0 +1,7 @@
+﻿<scene version="0.6.0">
+    <!-- Fill with the tuned parameters for the wCurly hairstyle and fur2 red material. -->
+    <default name="a" value="0.35" />
+    <default name="c" value="0.3" />
+    <default name="gamma" value="1" />
+    <default name="octaves" value="2" />
+</scene>

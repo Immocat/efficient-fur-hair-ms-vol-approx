@@ -1,0 +1,66 @@
+﻿<scene version="0.6.0">
+    <include filename="phase/$shadingModelPhase.xml" />
+
+    <default name="maxDepth" value="3" />
+    <default name="stepSize" value="1.6" />
+    <default name="a" value="0.104" />
+    <default name="c" value="0.174" />
+    <default name="gamma" value="1" />
+    <default name="octaves" value="2" />
+    <default name="deterministicOctaves" value="true" />
+    <default name="profileDisableWoodcock" value="false" />
+    <default name="profileForceScatterAtSurface" value="false" />
+    <default name="profileDisableLightMarch" value="false" />
+    <default name="profileDisableDeonPhaseEval" value="false" />
+    <default name="profileClampToNextHit" value="false" />
+
+    <default name="volResX" value="128" />
+    <default name="volResY" value="128" />
+    <default name="volResZ" value="128" />
+    <default name="densityVolFileName"
+        value="$hairName_$volResX_$volResY_$volResZ_atten_raw.hairvol" />
+    <default name="orientationVolFileName" value="$hairName_$volResX_$volResY_$volResZ_dir.vol" />
+    <default name="varianceVolFileName" value="$hairName_$volResX_$volResY_$volResZ_var.vol" />
+
+    <volume name="density" type="hairvolvolume" id="hairDensityVol">
+        <string name="filename" value="./$densityVolFileName" />
+    </volume>
+    <volume name="orientation" type="gridvolume" id="hairDirVol">
+        <string name="filename" value="./$orientationVolFileName" />
+    </volume>
+    <volume name="variance" type="gridvolume" id="hairVarVol">
+        <string name="filename" value="./$varianceVolFileName" />
+    </volume>
+    <volume name="albedo" type="constvolume" id="hairAlbedoVol">
+        <spectrum name="value" value="1.0" />
+    </volume>
+
+    <medium type="hairheterogeneous" id="hairMedium">
+        <string name="method" value="woodcock" />
+        <float name="scale" value="1" />
+        <ref name="density" id="hairDensityVol" />
+        <ref name="orientation" id="hairDirVol" />
+        <ref name="albedo" id="hairAlbedoVol" />
+        <boolean name="useTensorDirectionalDensity" value="false" />
+        <ref id="$phaseFunction" />
+    </medium>
+
+    <default name="rayMask" value="2" />
+    <include filename="hairgeo/$hairName.xml" />
+
+    <integrator type="hairvolume">
+        <integer name="maxDepth" value="$maxDepth" />
+        <float name="stepSize" value="$stepSize" />
+        <integer name="octaves" value="$octaves" />
+        <float name="c" value="$c" />
+        <float name="a" value="$a" />
+        <float name="gamma" value="$gamma" />
+        <boolean name="deterministicOctaves" value="$deterministicOctaves" />
+        <boolean name="profileDisableWoodcock" value="$profileDisableWoodcock" />
+        <boolean name="profileForceScatterAtSurface" value="$profileForceScatterAtSurface" />
+        <boolean name="profileDisableLightMarch" value="$profileDisableLightMarch" />
+        <boolean name="profileDisableDeonPhaseEval" value="$profileDisableDeonPhaseEval" />
+        <boolean name="profileClampToNextHit" value="$profileClampToNextHit" />
+        <ref name="medium" id="hairMedium" />
+    </integrator>
+</scene>

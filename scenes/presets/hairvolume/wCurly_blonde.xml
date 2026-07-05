@@ -1,0 +1,7 @@
+﻿<scene version="0.6.0">
+    <!-- Fill with the tuned parameters for the wCurly hairstyle and blonde material. -->
+    <default name="a" value="0.625" />
+    <default name="c" value="0.704" />
+    <default name="gamma" value="0.8" />
+    <default name="octaves" value="5" />
+</scene>

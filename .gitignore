@@ -1,0 +1,46 @@
+# Build-related
+.sconf_temp
+build/release
+build/debug
+debian
+.sconsign.dblite
+config.py
+config.log
+*.pyc
+
+# MSVC++-related
+build/mitsuba-msvc2017.sdf
+build/mitsuba-msvc2017.suo
+build/mitsuba-msvc2017.vcxproj.user
+build/.vs/**/*
+dist
+
+# Debugging history files
+\.gdb_history
+
+# OSX binaries and byproducts
+Mitsuba.app
+.DS_Store
+
+# Imported geometry and some default output types
+/meshes
+/textures
+mitsuba.*.log
+*.exr
+
+# Eclipse CDT project files
+.externalToolBuilders
+.settings
+.cproject
+.project
+
+# Visual Studio Code related
+.vscode/
+
+# We build cmake projects here
+cbuild/
+
+CMakeFiles/
+CMakeCache.txt
+
+ref/

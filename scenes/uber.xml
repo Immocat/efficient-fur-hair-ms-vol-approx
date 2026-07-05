@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<scene version="0.6.0">
+    <!-- Camera -->
+    <default name="spp" value="32" />
+    <default name="filmRes" value="1024" />
+
+    <!-- Hair file's name. Does not include ".hair" -->
+    <default name="hairName" value="wCurly"></default>
+
+    <!-- Shading model's name. -->
+    <!-- Current options: dEon, fur2 -->
+    <default name="shadingModel" value="dEon"></default>
+    <default name="material" value="dEon_blonde" />
+
+    <!-- BCSDF name -->
+    <default name="hairBCSDF" value="$shadingModel-BCSDF"></default>
+    <!-- Phase function name -->
+    <default name="phaseFunction" value="$shadingModel-Phase"></default>
+
+    <!-- Method name -->
+    <!-- Current options: path, ours, hairvoxel, hairvoxel_v2 -->
+    <default name="method" value="path"></default>
+    <default name="hairvolumePreset" value="none" />
+    <default name="lightingScene" value="ThreePointLighting" />
+    <default name="headScene" value="$hairName"/>
+
+    <default name="cameraProfile" value="camera/$hairName_BackCamera.xml"></default>
+    <default name="methodProfile" value="methods/$method.xml"></default>
+    <default name="hairvolumePresetProfile" value="presets/hairvolume/$hairvolumePreset.xml" />
+    <default name="DebuglightingProfile" value="lightingScene/const.xml"></default>
+    <default name="lightingProfile" value="lightingScene/$lightingScene.xml"></default>
+    <default name="materialProfile" value="material/$material.xml"></default>
+    <default name="headSceneProfile" value="head/$headScene.xml"/>
+
+    <include filename="$materialProfile" />
+    <include filename="$cameraProfile" />
+    <include filename="$hairvolumePresetProfile" />
+    <include filename="$methodProfile" />
+    <!-- <include filename="$DebuglightingProfile"></include> -->
+    
+    
+    <include filename="$headSceneProfile"></include>
+    <include filename="$lightingProfile"></include>
+</scene>

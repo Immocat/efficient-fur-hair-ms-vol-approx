@@ -1,0 +1,42 @@
+﻿<scene version="0.6.0">
+    <default name="rgbMaskR" value="1" />
+    <default name="rgbMaskG" value="1" />
+    <default name="rgbMaskB" value="1" />
+    <default name="maskPhase" value="true" />
+    <default name="maskAlbedo" value="true" />
+    <default name="useUniformSphereSampling" value="false" />
+
+    <default name="roughness" value="0.5" />
+    <default name="melaninConcentration" value="0.2" />
+    <default name="melaninRatio" value="0.5" />
+
+    <default name="overrideSigmaA" value="false" />
+    <default name="sigmaA_x" value="0.001858" />
+    <default name="sigmaA_y" value="0.000708" />
+    <default name="sigmaA_z" value="0.000192" />
+    <default name="useTransmissive" value="true" />
+
+
+    <bsdf type="dEon" id="dEon-BCSDF">
+        <float name="roughness" value="$roughness" />
+        <float name="melaninConcentration" value="$melaninConcentration" />
+        <float name="melaninRatio" value="$melaninRatio" />
+        <boolean name="overrideSigmaA" value="$overrideSigmaA"></boolean>
+        <vector name="sigmaA" x="$sigmaA_x" y="$sigmaA_y" z="$sigmaA_z"></vector>
+    </bsdf>
+
+    <phase type="dEonPhase" id="dEon-Phase">
+        <float name="roughness" value="$roughness" />
+        <float name="melaninConcentration" value="$melaninConcentration" />
+        <float name="melaninRatio" value="$melaninRatio" />
+        <boolean name="overrideSigmaA" value="$overrideSigmaA"></boolean>
+        <vector name="sigmaA" x="$sigmaA_x" y="$sigmaA_y" z="$sigmaA_z"></vector>
+        <boolean name="useTransmissive" value="$useTransmissive"></boolean>
+        
+        <vector name="rgbMask" x="1" y="1" z="1" />
+        <boolean name="maskPhase" value="true" />
+        <boolean name="maskAlbedo" value="true" />
+        <boolean name="testIntegration" value="false" />
+        <boolean name="useUniformSphereSampling" value="$useUniformSphereSampling" />
+    </phase>
+</scene>

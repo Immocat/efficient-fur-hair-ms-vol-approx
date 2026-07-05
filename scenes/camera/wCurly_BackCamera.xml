@@ -1,0 +1,28 @@
+﻿<scene version="0.6.0">
+    <sensor type="perspective" id="camera">
+        <string name="fovAxis" value="y" />
+        <transform name="toWorld">
+            <lookAt origin="-390, 5, 0" target="-30, 5, 0" up="0, 1, 0" />
+        </transform>
+        <string name="focalLength" value="85mm" />
+
+        <sampler type="ldsampler">
+            <integer name="sampleCount" value="$spp" />
+        </sampler>
+
+        <film type="hdrfilm">
+            <integer name="width" value="$filmRes" />
+            <integer name="height" value="$filmRes" />
+            <!-- <integer name="cropOffsetX" value="600" />
+            <integer name="cropOffsetY" value="486" />
+            <integer name="cropWidth" value="2" />
+            <integer name="cropHeight" value="2" /> -->
+            <rfilter type="box" />
+
+            <!-- <string name="label[10,10]"
+            value="Integrator: $integrator['type']; $sampler['sampleCount'] spp; $integrator['maxDepth']
+         bounce; $film['width']x$film['height']" /> -->
+            <boolean name="banner" value="false" />
+        </film>
+    </sensor>
+</scene>

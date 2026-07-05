@@ -1,0 +1,32 @@
+﻿<scene version="0.6.0">
+
+<shape type="rectangle">
+        <transform name="toWorld">
+            <matrix value="0 0 -1 90 100 0 0 0 0 -95 0 0 0 0 0 1" />
+        </transform>
+        <bsdf type="twosided">
+            <bsdf type="roughdiffuse">
+                <texture type="bitmap" name="reflectance">
+                    <string name="filename" value="stone4.jpeg" />
+                </texture>
+                <float name="alpha" value="0.95" />
+            </bsdf>
+        </bsdf>
+    </shape>
+
+    <emitter type="constant">
+        <spectrum name="radiance" value="0.5"/> </emitter>
+    
+
+    <emitter type="spot">
+        <spectrum name="intensity" value="60000"/> 
+        
+        <float name="cutoffAngle" value="45"/>
+        <float name="beamWidth" value="30"/>
+
+        <transform name="toWorld">
+            <lookAt origin="-146.0331, 30, -34.2687" target="0, 0, 0" up="0, 1, 0" />
+        </transform>
+    </emitter>
+
+</scene>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<scene version="0.6.0">
+    <include filename="bsdf/$shadingModel.xml" />
+
+    <default name="maxDepth" value="2" />
+    <default name="rrDepth" value="5" />
+
+    <default name="rayMask" value="1" />
+    <include filename="hairgeo/$hairName.xml" />
+
+    <integrator type="hairpath">
+        <integer name="maxDepth" value="$maxDepth" />
+        <integer name="rrDepth" value="$rrDepth" />
+    </integrator>
+
+    <!-- Voxelization parameters -->
+    <default name="voxelCount" value="128" />
+    <default name="voxelCountX" value="0" />
+    <default name="voxelCountY" value="0" />
+    <default name="voxelCountZ" value="0" />
+    <default name="dMultiplier" value="1.5" />
+    <default name="sampleDeltaAlongHair" value="0.02" />
+    <default name="outputSuffix" value="" />
+
+    <precomputer type="hairvoxelizer">
+        <integer name="voxelCount" value="$voxelCount"></integer>
+        <integer name="voxelCountX" value="$voxelCountX"></integer>
+        <integer name="voxelCountY" value="$voxelCountY"></integer>
+        <integer name="voxelCountZ" value="$voxelCountZ"></integer>
+        <float name="dMultiplier" value="$dMultiplier"></float>
+        <float name="sampleDeltaAlongHair" value="$sampleDeltaAlongHair"></float>
+        <string name="outputSuffix" value="$outputSuffix" />
+    </precomputer>
+</scene>
